@@ -1,0 +1,23 @@
+name: Despliegue Manual en Windows
+
+on:
+  workflow_dispatch:
+    inputs:
+      nombre_usuario:
+        description: 'Escribe tu nombre'
+        required: true
+        type: string
+      tipo_despliegue:
+        description: 'Elige qué vas a desplegar'
+        required: true
+        type: choice
+        options:
+          - frontend
+          - backend
+
+jobs:
+  Ejecutar-Despliegue-Local:
+    runs-on: windows-latest
+    steps:
+      - name: Imprimir mensaje en PowerShell
+        run: Write-Output "Hola, iniciando despliegue de ${{ inputs.tipo_despliegue }} solicitado por el usuario ${{ inputs.nombre_usuario }}"
