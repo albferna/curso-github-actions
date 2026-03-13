@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       nombre_usuario: 
-        description: 'Alberto A. Fernández'
+        description: 'Alberto A. Fernández '
         required: true
         type: string
       tipo_despliegue:
